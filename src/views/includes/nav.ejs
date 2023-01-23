@@ -1,0 +1,33 @@
+<nav class="" id="nav-fixed">
+  <div class="logo">
+    <a class="navbar-brand color-white" href="/">Agenda</a>
+  </div>
+  <div class="justify-end menu-container">
+    <button id="button">
+      <img width="32px" src="/assets/img/hamburger-menu-svgrepo-com.svg" alt="">
+    </button>
+
+    <div class="menu" id="navbarSupportedContent"  >
+      <ul>
+        <% if (!user) { %>
+        <li class="nav-item">
+          <a class="nav-link color-white" href="/logon/signIn">signIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link color-white" href="/logon/signUp">signUp</a>
+        </li>
+    <% } %>
+
+    <% if (user) {%>
+        <li class="nav-item">
+          <a class="nav-link color-white" href="/contact/index">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link color-white" href="/logon/logOut">logOut</a>
+        </li>
+        <%} %>
+      </ul>
+    </div>
+  </div>
+</nav>

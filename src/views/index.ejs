@@ -1,0 +1,53 @@
+<%- include('includes/nav'); %> <%- include('includes/head'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+
+        <% if (!user) { %>
+          <h1 class="text-center">Faça Login para vizualizar seus contatos salvos</h1>
+          <div class="container">
+            <img class="container" width="500px" src="/assets/img/undraw_wait_in_line_o2aq.svg" alt="">
+          </div>
+
+        <%  } else { %>
+
+
+        <h1 class="text-center">Agenda</h1>
+        
+        <% if (contacts.length > 0)  {%>
+        <p class="text-center" >Bem Vindo (a) de volta <%=user.email %></p>
+
+        <p class="text-center lead">Seus contatos estão abaixo</p>
+
+        <%- include('includes/messages'); %>
+
+            <div class="responsive-table table-overflow">
+              <table class="table my-3">
+                  <thead>
+                    <th>Name</th>
+                    <th>lastName</th>
+                    <th>Tel</th>
+                    <th>Email</th>
+                  </thead>
+                  <% contacts.forEach (contact => {%>
+                  <tr>
+                    <td><%=contact.name%></td>
+                    <td><%=contact.lastName%></td>
+                    <td><%=contact.tel%></td>
+                    <td><%=contact.email%></td>
+                    <td><a href="/contact/index/<%= contact._id %>"><img width="24px" src="assets/img/delete-recycle-bin-trash-can-svgrepo-com.svg" alt=""></a></td>
+                    <td><a class="text-danger" href="/contact/delete/<%= contact._id %>"><img width="24px" src="/assets/img/edit-svgrepo-com.svg" alt=""></a></td>
+                  </tr>
+            </div>
+                <% }) %>
+        <%} else { %>
+             <p class="text-center">Não existem contatos salvos na sua Agenda</p>
+          <%} %>
+        <% }  %>
+  </div>
+</div>
+
+<%- include('includes/footer'); %>

@@ -1,0 +1,51 @@
+<%- include('includes/nav'); %> <%- include('includes/head'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Cadastre-se</h1>
+      <p class="text-center lead"></p>
+
+      <div class="row my-5">
+        
+        <div class="col-lg">
+          <img width="260px" src="/assets/img/undraw_sign_in_re_o58h.svg" alt="">
+        </div>
+
+        <div class="col-lg">
+          <h4>Faça Seu Cadastro</h4>
+
+          <%- include('includes/messages'); %>
+          <div class="alert alert-danger hidden" id="alertMessage"></div>
+
+          <form class="container form-sign-in" action="/logon/register" method="post">
+            <div class="mb-3">
+              <input type="hidden" name="_csrf" value=<%= csrfToken%>>
+              <label for="email" class="form-label">Email</label>
+              <input placeholder="teste@email.com" name="email" id="email" type="email" class="form-control">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input placeholder="6-20 character" name="password" id="password" type="password" class="form-control">
+            </div>
+            <div class="flex-row">
+            <button type="submit" class="btn btn-primary">Faça Seu Cadastro</button>
+            <button type="button" class="btn"> <a class="normal-link" href="/logon/signUp">Já Tenho Uma Conta</a></button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer'); %>

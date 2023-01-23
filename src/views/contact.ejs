@@ -1,0 +1,51 @@
+<%- include('includes/nav'); %> <%- include('includes/head'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+        <h1 class="text-center">CONTACT</h1>
+        <% if(contact._id) {%>
+          <p class="text-center lead">Edit and save this contact</p>
+        <%} else  {%>
+        <p class="text-center lead">Create and save a New contact</p>
+        <%} %>
+    </div>
+
+    <%- include('includes/messages'); %>
+    <div class="container">
+    <% if(contact._id) {%>
+      <form class="container" action="/contact/edit/<%= contact._id%>" method="post">
+    <% } else  { %>
+        <form class="container" action="/contact/register" method="post">
+    <% } %>
+      <input type="hidden" name="_csrf" value=<%= csrfToken%>>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input value="<%= contact.name%>" name="name" id="name" type="text" class="form-control">
+      </div>
+      
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input value="<%= contact.lastName%>" name="lastName" id="lastName" type="text" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="tel" class="form-label">Phone</label>
+        <input value="<%= contact.tel%>" name="tel" id="tel" type="tel" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input value="<%= contact.email%>" name="email" id="email" type="email" class="form-control">
+      </div>
+
+       <div class="flex-row">
+         <button type="submit" class="btn btn-primary">SAVE</button>
+       </div>
+    </form>
+    </div>
+</div>
+
+<%- include('includes/footer'); %>

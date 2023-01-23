@@ -1,0 +1,51 @@
+<%- include('includes/nav') %> <%- include('includes/head') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Fazer Login</h1>
+      <p class="text-center lead"></p>
+
+      <div class="row my-5">
+
+        <div class="col-lg">
+          <img width="260px" src="/assets/img/undraw_login_re_4vu2.svg" alt="">
+        </div>
+    
+        <div class="col-lg">
+          <h4>Entre na sua Conta</h4>
+
+          <%- include('includes/messages'); %>
+
+          <form class="container form-sign-up" action="/logon/login" method="post">
+            <div class="mb-3">
+              <input type="hidden" name="_csrf" value=<%= csrfToken%>>
+              <label for="email" class="form-label">Email</label>
+              <input placeholder="teste@email.com" type="email" class="form-control" id="email" name="email"/>
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input placeholder="6-20 character" type="password" class="form-control" name="password" id="password"/>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="flex-row">
+              <button type="submit" class="btn btn-primary">Entrar</button>
+              <button type="button" class="btn"><a class="normal-link" href="/logon/signIn">Não Tenho Uma Conta, Quero Me Cadastrar</a></button>
+           </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%- include('includes/footer'); %>
