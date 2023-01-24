@@ -18,7 +18,7 @@ exports.register = async (req, res) => {
       console.log(login.errors);
 
       req.session.save(() => {
-        return res.redirect("/logon/signIn");
+        return res.redirect("/logon/signUp");
       });
       return;
     }
@@ -41,7 +41,7 @@ exports.login = async (req, res) => {
     if (login.errors.length > 0) {
       req.flash("errors", login.errors);
       req.session.save(() => {
-        return res.redirect("/logon/signUp");
+        return res.redirect("/logon/signIn");
       });
       return;
     }
@@ -49,7 +49,7 @@ exports.login = async (req, res) => {
     req.flash("success", "Login Efetuado com Sucesso");
     req.session.user = login.user;
     req.session.save(() => {
-      return res.redirect("/contact/index");
+      return res.redirect("/");
     });
   } catch (e) {
     console.log(e);

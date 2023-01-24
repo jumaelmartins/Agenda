@@ -1,0 +1,15 @@
+{
+  "public": true,
+  "version": 2,
+  "name": "agenda",
+  "build": {
+    "src": "server.js",
+    "use": "@vercel/node"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
+}

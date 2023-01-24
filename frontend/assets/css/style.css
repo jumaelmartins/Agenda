@@ -56,6 +56,27 @@
   width: 64px;
 }
 
+.add-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellowgreen;
+  border-radius: 5px;
+  text-decoration: none;
+
+  box-shadow: 2px 2px 2px 2px darkgreen;
+
+  color: white;
+  padding: 1rem;
+  width: 64px;
+  height: 24px;
+}
+
+.add-button:hover {
+  filter: brightness(1.1);
+  box-shadow: 1px 1px 1px 1px darkgreen;
+}
+
 td a img {
     padding: 2px;
     border-radius: 22px;
