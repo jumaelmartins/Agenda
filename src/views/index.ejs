@@ -9,7 +9,7 @@
         <% if (!user) { %>
           <h1 class="text-center">Faça Login para vizualizar seus contatos salvos</h1>
           <div class="container">
-            <img class="container" width="500px" src="../../frontend/assets/img/undraw_wait_in_line_o2aq.svg" alt="">
+            <img class="container" width="500px" src="/assets/img/undraw_wait_in_line_o2aq.svg" alt="">
           </div>
 
         <%  } else { %>
@@ -31,7 +31,7 @@
                     <th>lastName</th>
                     <th>Tel</th>
                     <th>Email</th>
-                    <th><a class="add-button" href="/contact/index"><img width="24px" src="../../frontend/assets/img/add-circle-svgrepo-com.svg" alt=""> ADD</a></th>
+                    <th><a class="add-button" href="/contact/index"><img width="24px" src="/assets/img/add-circle-svgrepo-com.svg" alt=""> ADD</a></th>
                   </thead>
                   <% contacts.forEach (contact => {%>
                   <tr>
@@ -39,8 +39,8 @@
                     <td><%=contact.lastName%></td>
                     <td><%=contact.tel%></td>
                     <td><%=contact.email%></td>
-                    <td><a href="/contact/delete/<%= contact._id %>" ><img width="24px" src="../../frontend/assets/img/delete-recycle-bin-trash-can-svgrepo-com.svg" alt=""></a></td>
-                    <td><a href="/contact/index/<%= contact._id %>" class="text-danger"><img width="24px" src="../../frontend/assets/img/edit-svgrepo-com.svg" alt=""></a></td>
+                    <td><a href="/contact/delete/<%= contact._id %>" ><img width="24px" src="/assets/img/delete-recycle-bin-trash-can-svgrepo-com.svg" alt=""></a></td>
+                    <td><a href="/contact/index/<%= contact._id %>" class="text-danger"><img width="24px" src="/assets/img/edit-svgrepo-com.svg" alt=""></a></td>
                   </tr>
             </div>
                 <% }) %>
