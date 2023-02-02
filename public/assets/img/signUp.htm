@@ -1,0 +1,101 @@
+<nav class="" id="nav-fixed">
+  <div class="logo">
+    <a class="navbar-brand" href="/">Agenda</a>
+  </div>
+  <div class="justify-end menu-container">
+    <button id="button">
+    </button>
+
+    <div class="menu" id="navbarSupportedContent"  >
+      <ul>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/login/signIn">signIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login/signUp">signUp</a>
+        </li>
+    
+
+    
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css" integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+
+
+    <title>Projeto-Agenda</title>
+  </head>
+  <body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Fazer Login</h1>
+      <p class="text-center lead"></p>
+
+      <div class="row my-5">
+
+        <div class="col-lg">
+          <img width="260px" src="/assets/img/undraw_login_re_4vu2.svg" alt="">
+        </div>
+    
+        <div class="col-lg">
+          <h4>Entre na sua Conta</h4>
+
+          
+  
+  
+
+          <form class="container form-sign-up" action="/login/login" method="post">
+            <div class="mb-3">
+              <input type="hidden" name="_csrf" value=ZXo1sDGu-gUciYuaZd4cZbAKJUrvQqUEIeNc>
+              <label for="email" class="form-label">Email address</label>
+              <input placeholder="teste@email.com" type="email" class="form-control" id="email" name="email"/>
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input placeholder="6-20 character" type="password" class="form-control" name="password" id="password"/>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="flex-row">
+              <button type="submit" class="btn btn-primary">Entrar</button>
+              <button type="button" class="btn"><a class="normal-link" href="/login/signIn">Não Tenho Uma Conta, Quero Me Cadastrar</a></button>
+           </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    <script src="/assets/js/bundle.js"></script>
+    <!-- Optional JavaScript; choose one of the two!-->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
